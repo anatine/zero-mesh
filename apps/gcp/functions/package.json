@@ -1,0 +1,8 @@
+{
+  "name": "gcp-functions",
+  "engines": {
+    "node": "14"
+  },
+  "main": "./main.js",
+  "private": true
+}

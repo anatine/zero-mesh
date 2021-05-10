@@ -1,10 +1,59 @@
 {
-  
-  
   "version": 2,
-  
-  "projects": {},
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/node"
+  },
+  "defaultProject": "gcp-functions",
+  "projects": {
+    "gcp-functions": {
+      "root": "apps/gcp/functions",
+      "sourceRoot": "apps/gcp/functions/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/gcp/functions",
+            "main": "apps/gcp/functions/src/main.ts",
+            "tsConfig": "apps/gcp/functions/tsconfig.app.json",
+            "assets": ["apps/gcp/functions/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/gcp/functions/src/environments/environment.ts",
+                  "with": "apps/gcp/functions/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "gcp-functions:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/gcp/functions/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/gcp/functions"],
+          "options": {
+            "jestConfig": "apps/gcp/functions/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
   }
 }

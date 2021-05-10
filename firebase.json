@@ -1,0 +1,36 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "functions": {
+    "source": "./dist/apps/gcp/functions",
+    "predeploy": ["npm run build:gcp-functions"]
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "emulators": {
+    "auth": {
+      "port": 9100
+    },
+    "functions": {
+      "port": 9104
+    },
+    "firestore": {
+      "port": 9101
+    },
+    "database": {
+      "port": 9102
+    },
+    "pubsub": {
+      "port": 9103
+    },
+    "ui": {
+      "enabled": true
+    }
+  }
+}

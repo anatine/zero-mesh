@@ -1,0 +1,136 @@
+[debug] [2021-05-10T22:57:31.806Z] ----------------------------------------------------------------------
+[debug] [2021-05-10T22:57:31.807Z] Command:       /Users/brian/.nvm/versions/node/v16.0.0/bin/node /Users/brian/.nvm/versions/node/v16.0.0/bin/firebase emulators:start
+[debug] [2021-05-10T22:57:31.808Z] CLI Version:   9.10.2
+[debug] [2021-05-10T22:57:31.808Z] Platform:      darwin
+[debug] [2021-05-10T22:57:31.808Z] Node Version:  v16.0.0
+[debug] [2021-05-10T22:57:31.809Z] Time:          Mon May 10 2021 15:57:31 GMT-0700 (Pacific Daylight Time)
+[debug] [2021-05-10T22:57:31.809Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-05-10T22:57:31.813Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-05-10T22:57:31.813Z] > authorizing via signed-in user (brianm@ignw.io)
+[info] i  emulators: Starting emulators: auth, functions, firestore, database, pubsub {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, database, pubsub"}}
+[debug] [2021-05-10T22:57:31.827Z] [hub] writing locator at /var/folders/wl/bx7n83p16td96hjkdwd7jzz40000gn/T/hub-zero-mesh-brian.json
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: hosting {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mhosting\u001b[22m"}}
+[warn] ⚠  Your requested "node" version "14" doesn't match your global version "16" {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"14\" doesn't match your global version \"16\""}}
+[debug] [2021-05-10T22:57:31.889Z] defaultcredentials: writing to file /Users/brian/.config/firebase/brianm_ignw_io_application_default_credentials.json
+[debug] [2021-05-10T22:57:31.892Z] Setting GAC to /Users/brian/.config/firebase/brianm_ignw_io_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/brian/.config/firebase/brianm_ignw_io_application_default_credentials.json"}}
+[debug] [2021-05-10T22:57:31.894Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/zero-mesh-brian/adminSdkConfig [none]
+[debug] [2021-05-10T22:57:32.129Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/zero-mesh-brian/adminSdkConfig 200
+[debug] [2021-05-10T22:57:32.129Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/zero-mesh-brian/adminSdkConfig {"projectId":"zero-mesh-brian","databaseURL":"https://zero-mesh-brian-default-rtdb.firebaseio.com","storageBucket":"zero-mesh-brian.appspot.com","locationId":"us-central"}
+[debug] [2021-05-10T22:57:32.414Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2021-05-10T22:57:32.415Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-05-10T22:57:32.415Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/brian/.cache/firebase/emulators/cloud-firestore-emulator-v1.11.15.jar","--host","localhost","--port",9101,"--rules","/Users/brian/Development/anatine/zero-mesh/firestore.rules","--functions_emulator","localhost:9104"],"optionalArgs":["port","webchannel_port","host","rules","functions_emulator","seed_from_export"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/brian/.cache/firebase/emulators/cloud-firestore-emulator-v1.11.15.jar\",\"--host\",\"localhost\",\"--port\",9101,\"--rules\",\"/Users/brian/Development/anatine/zero-mesh/firestore.rules\",\"--functions_emulator\",\"localhost:9104\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"functions_emulator\",\"seed_from_export\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2021-05-10T22:57:33.465Z] May 10, 2021 3:57:33 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://localhost:61098
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 10, 2021 3:57:33 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://localhost:61098\n"}}
+[debug] [2021-05-10T22:57:33.486Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2021-05-10T22:57:33.487Z] localhost:9101
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=localhost:9101
+
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"localhost:9101\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=localhost:9101\n\nDev App Server is now running.\n\n"}}
+[debug] [2021-05-10T22:57:33.702Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/zero-mesh-brian [none]
+[debug] [2021-05-10T22:57:33.864Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/zero-mesh-brian 200
+[debug] [2021-05-10T22:57:33.864Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/zero-mesh-brian {"projectId":"zero-mesh-brian","projectNumber":"1024834286558","displayName":"zero-mesh-brian","name":"projects/zero-mesh-brian","resources":{"hostingSite":"zero-mesh-brian","realtimeDatabaseInstance":"zero-mesh-brian-default-rtdb","storageBucket":"zero-mesh-brian.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[debug] [2021-05-10T22:57:33.865Z] database rules config:  [{"instance":"zero-mesh-brian-default-rtdb","rules":"/Users/brian/Development/anatine/zero-mesh/database.rules.json"}]
+[debug] [2021-05-10T22:57:33.866Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2021-05-10T22:57:33.867Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-05-10T22:57:33.867Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2021-05-10T22:57:33.867Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/brian/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar","--host","localhost","--port",9102,"--functions_emulator_host","localhost","--functions_emulator_port",9104],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"/Users/brian/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar\",\"--host\",\"localhost\",\"--port\",9102,\"--functions_emulator_host\",\"localhost\",\"--functions_emulator_port\",9104],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\"],\"joinArgs\":false}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2021-05-10T22:57:34.585Z] WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/brian/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar) to field sun.nio.ch.SelectorImpl.selectedKeys
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release {"metadata":{"emulator":{"name":"database"},"message":"WARNING: An illegal reflective access operation has occurred\nWARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/brian/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar) to field sun.nio.ch.SelectorImpl.selectedKeys\nWARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil\nWARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations\nWARNING: All illegal access operations will be denied in a future release"}}
+[debug] [2021-05-10T22:57:34.586Z] 
+ {"metadata":{"emulator":{"name":"database"},"message":"\n"}}
+[debug] [2021-05-10T22:57:35.399Z] 15:57:35.398 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ {"metadata":{"emulator":{"name":"database"},"message":"15:57:35.398 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\n"}}
+[debug] [2021-05-10T22:57:35.567Z] 15:57:35.566 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9102
+ {"metadata":{"emulator":{"name":"database"},"message":"15:57:35.566 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9102\n"}}
+[debug] [2021-05-10T22:57:37.512Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2021-05-10T22:57:37.512Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-05-10T22:57:37.512Z] Starting Pub/Sub Emulator with command {"binary":"/Users/brian/.cache/firebase/emulators/pubsub-emulator-0.1.0/pubsub-emulator/bin/cloud-pubsub-emulator","args":["--host=localhost","--port=9103"],"optionalArgs":["port","host"],"joinArgs":true} {"metadata":{"emulator":{"name":"pubsub"},"message":"Starting Pub/Sub Emulator with command {\"binary\":\"/Users/brian/.cache/firebase/emulators/pubsub-emulator-0.1.0/pubsub-emulator/bin/cloud-pubsub-emulator\",\"args\":[\"--host=localhost\",\"--port=9103\"],\"optionalArgs\":[\"port\",\"host\"],\"joinArgs\":true}"}}
+[info] i  pubsub: Pub/Sub Emulator logging to pubsub-debug.log {"metadata":{"emulator":{"name":"pubsub"},"message":"Pub/Sub Emulator logging to \u001b[1mpubsub-debug.log\u001b[22m"}}
+[debug] [2021-05-10T22:57:37.707Z] This is the Google Pub/Sub fake.
+Implementation may be incomplete or differ from the real system. {"metadata":{"emulator":{"name":"pubsub"},"message":"This is the Google Pub/Sub fake.\nImplementation may be incomplete or differ from the real system."}}
+[debug] [2021-05-10T22:57:37.707Z] 
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"\n"}}
+[debug] [2021-05-10T22:57:37.754Z] May 10, 2021 3:57:37 PM com.google.cloud.pubsub.testing.v1.Main main
+INFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"May 10, 2021 3:57:37 PM com.google.cloud.pubsub.testing.v1.Main main\nINFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported\n"}}
+[debug] [2021-05-10T22:57:38.176Z] May 10, 2021 3:57:38 PM io.gapi.emulators.netty.NettyUtil applyJava7LongHostnameWorkaround
+INFO: Unable to apply Java 7 long hostname workaround.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"May 10, 2021 3:57:38 PM io.gapi.emulators.netty.NettyUtil applyJava7LongHostnameWorkaround\nINFO: Unable to apply Java 7 long hostname workaround.\n"}}
+[debug] [2021-05-10T22:57:38.270Z] May 10, 2021 3:57:38 PM com.google.cloud.pubsub.testing.v1.Main main
+INFO: Server started, listening on 9103
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"May 10, 2021 3:57:38 PM com.google.cloud.pubsub.testing.v1.Main main\nINFO: Server started, listening on 9103\n"}}
+[debug] [2021-05-10T22:57:38.381Z] May 10, 2021 3:57:38 PM io.gapi.emulators.grpc.GrpcServer$3 operationComplete
+INFO: Adding handler(s) to newly registered Channel.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"May 10, 2021 3:57:38 PM io.gapi.emulators.grpc.GrpcServer$3 operationComplete\nINFO: Adding handler(s) to newly registered Channel.\n"}}
+[debug] [2021-05-10T22:57:38.549Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-05-10T22:57:38.549Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2021-05-10T22:57:38.549Z] Starting Emulator UI with command {"binary":"node","args":["/Users/brian/.cache/firebase/emulators/ui-v1.4.2/server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/brian/.cache/firebase/emulators/ui-v1.4.2/server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2021-05-10T22:57:38.636Z] Web / API server started at http://localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at http://localhost:4000\n"}}
+[info] i  functions: Watching "/Users/brian/Development/anatine/zero-mesh/dist/apps/gcp/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/brian/Development/anatine/zero-mesh/dist/apps/gcp/functions\" for Cloud Functions..."}}
+[debug] [2021-05-10T22:57:38.826Z] [worker-pool] addWorker(~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(~diagnostic~)"}}
+[debug] [2021-05-10T22:57:38.826Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key ~diagnostic~, total=1"}}
+[debug] [2021-05-10T22:57:38.826Z] [worker-pool] submitWork(triggerId=) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=)"}}
+[debug] [2021-05-10T22:57:38.827Z] [worker-~diagnostic~-b5d57870-8254-4857-bc4e-ef44bda65dd3]: Assigning socketPath: /var/folders/wl/bx7n83p16td96hjkdwd7jzz40000gn/T/fire_emu_39329.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-b5d57870-8254-4857-bc4e-ef44bda65dd3]: Assigning socketPath: /var/folders/wl/bx7n83p16td96hjkdwd7jzz40000gn/T/fire_emu_39329.sock"}}
+[debug] [2021-05-10T22:57:38.827Z] [worker-~diagnostic~-b5d57870-8254-4857-bc4e-ef44bda65dd3]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-b5d57870-8254-4857-bc4e-ef44bda65dd3]: BUSY"}}
+[debug] [2021-05-10T22:57:38.955Z] [runtime-status] [39329] Functions runtime initialized. {"cwd":"/Users/brian/Development/anatine/zero-mesh/dist/apps/gcp/functions","node_version":"16.0.0"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39329] Functions runtime initialized. {\"cwd\":\"/Users/brian/Development/anatine/zero-mesh/dist/apps/gcp/functions\",\"node_version\":\"16.0.0\"}"}}
+[debug] [2021-05-10T22:57:38.956Z] [runtime-status] [39329] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39329] Disabled runtime features: undefined"}}
+[debug] [2021-05-10T22:57:38.958Z] [runtime-status] [39329] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.7.0","resolution":"/Users/brian/Development/anatine/zero-mesh/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39329] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"9.7.0\",\"resolution\":\"/Users/brian/Development/anatine/zero-mesh/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2021-05-10T22:57:38.959Z] [runtime-status] [39329] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.13.2","resolution":"/Users/brian/Development/anatine/zero-mesh/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39329] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.13.2\",\"resolution\":\"/Users/brian/Development/anatine/zero-mesh/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2021-05-10T22:57:38.961Z] [runtime-status] [39329] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.13.2","resolution":"/Users/brian/Development/anatine/zero-mesh/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39329] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.13.2\",\"resolution\":\"/Users/brian/Development/anatine/zero-mesh/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2021-05-10T22:57:38.962Z] [runtime-status] [39329] Set PUBSUB_EMULATOR_HOST to localhost:9103 {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39329] Set PUBSUB_EMULATOR_HOST to localhost:9103"}}
+[debug] [2021-05-10T22:57:38.963Z] [runtime-status] [39329] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39329] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2021-05-10T22:57:38.964Z] [runtime-status] [39329] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.13.2","resolution":"/Users/brian/Development/anatine/zero-mesh/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39329] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.13.2\",\"resolution\":\"/Users/brian/Development/anatine/zero-mesh/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2021-05-10T22:57:39.010Z] [runtime-status] [39329] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39329] Checked functions.config() {\"config\":{}}"}}
+[debug] [2021-05-10T22:57:39.010Z] [runtime-status] [39329] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.13.2","resolution":"/Users/brian/Development/anatine/zero-mesh/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39329] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.13.2\",\"resolution\":\"/Users/brian/Development/anatine/zero-mesh/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2021-05-10T22:57:39.010Z] [runtime-status] [39329] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.13.2","resolution":"/Users/brian/Development/anatine/zero-mesh/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39329] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.13.2\",\"resolution\":\"/Users/brian/Development/anatine/zero-mesh/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2021-05-10T22:57:39.011Z] [runtime-status] [39329] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.7.0","resolution":"/Users/brian/Development/anatine/zero-mesh/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39329] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"9.7.0\",\"resolution\":\"/Users/brian/Development/anatine/zero-mesh/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2021-05-10T22:57:39.011Z] [runtime-status] [39329] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.13.2","resolution":"/Users/brian/Development/anatine/zero-mesh/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39329] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.13.2\",\"resolution\":\"/Users/brian/Development/anatine/zero-mesh/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2021-05-10T22:57:39.011Z] [runtime-status] [39329] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.7.0","resolution":"/Users/brian/Development/anatine/zero-mesh/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [39329] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"9.7.0\",\"resolution\":\"/Users/brian/Development/anatine/zero-mesh/node_modules/firebase-admin/lib/index.js\"}}"}}
+[info] ✔  functions[helloWorld]: http function initialized (http://localhost:9104/zero-mesh-brian/us-central1/helloWorld). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:9104/zero-mesh-brian/us-central1/helloWorld)."}}
+[debug] [2021-05-10T22:57:39.015Z] >>> HTTP REQUEST PUT http://localhost:9102/.settings/rules.json?ns=zero-mesh-brian-default-rtdb  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+[debug] [2021-05-10T22:57:39.017Z] [worker-~diagnostic~-b5d57870-8254-4857-bc4e-ef44bda65dd3]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-b5d57870-8254-4857-bc4e-ef44bda65dd3]: IDLE"}}
+[debug] [2021-05-10T22:57:39.401Z] <<< HTTP RESPONSE 200 {"content-length":"15","content-type":"application/json; charset=utf-8","access-control-allow-origin":"*","cache-control":"no-cache","x-firebase-project-id":"zero-mesh-brian-default-rtdb","x-firebase-project-number":"123456789","x-firebase-uuid":"1ef000ca-6dd6-42b4-8772-78a25c36d3ad"}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Authentication │ localhost:9100 │ http://localhost:4000/auth      │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Functions      │ localhost:9104 │ http://localhost:4000/functions │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Firestore      │ localhost:9101 │ http://localhost:4000/firestore │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Database       │ localhost:9102 │ http://localhost:4000/database  │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Pub/Sub        │ localhost:9103 │ n/a                             │
+└────────────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
