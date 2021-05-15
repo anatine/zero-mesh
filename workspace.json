@@ -73,6 +73,49 @@
             "jestConfig": "libs/utilities/firebase/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "libs/utilities/firebase",
+            "tsConfig": "libs/utilities/firebase/tsconfig.lib.json",
+            "packageJson": "libs/utilities/firebase/package.json",
+            "main": "libs/utilities/firebase/src/index.ts",
+            "assets": ["libs/utilities/firebase/*.md"]
+          }
+        }
+      }
+    },
+    "databases": {
+      "root": "libs/databases",
+      "sourceRoot": "libs/databases/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/databases/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/databases"],
+          "options": {
+            "jestConfig": "libs/databases/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/databases",
+            "tsConfig": "libs/databases/tsconfig.lib.json",
+            "packageJson": "libs/databases/package.json",
+            "main": "libs/databases/src/index.ts",
+            "assets": ["libs/databases/*.md"]
+          }
         }
       }
     }

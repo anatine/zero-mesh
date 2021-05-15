@@ -1,0 +1,19 @@
+{
+  "name": "firebase-utils",
+  "description": "A few handy tools when working with Firebase",
+  "version": "0.0.1",
+  "license": "MIT",
+  "types": "src/index.d.ts",
+  "author": {
+    "name": "Brian McBride",
+    "url": "https://www.linkedin.com/in/brianmcbride"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anatine/zero-mesh"
+  },
+  "main": "src/index.js",
+  "peerDependencies": {
+    "firebase-admin": "^9.8.0"
+  }
+}
