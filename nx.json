@@ -24,6 +24,9 @@
   "projects": {
     "gcp-functions": {
       "tags": ["tests"]
+    },
+    "utilities-firebase": {
+      "tags": []
     }
   }
 }

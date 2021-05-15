@@ -54,6 +54,27 @@
           }
         }
       }
+    },
+    "utilities-firebase": {
+      "root": "libs/utilities/firebase",
+      "sourceRoot": "libs/utilities/firebase/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/utilities/firebase/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/utilities/firebase"],
+          "options": {
+            "jestConfig": "libs/utilities/firebase/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
