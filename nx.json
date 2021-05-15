@@ -25,11 +25,11 @@
     "gcp-functions": {
       "tags": ["tests"]
     },
-    "utilities-firebase": {
-      "tags": []
-    },
     "databases": {
       "tags": []
+    },
+    "utilities-firebase": {
+      "tags": ["firebase", "utilities"]
     }
   }
 }

@@ -1,7 +1,7 @@
 import { getFirebaseAdmin, validateToken } from './utilities-firebase';
 import * as admin from 'firebase-admin';
 import * as shortId from 'short-uuid';
-import { getIdToken } from './testing-tools';
+import { getTestIdToken } from './testing-tools';
 
 describe(`Firebase Utilities`, () => {
   it('should get an instance of admin', () => {
@@ -15,7 +15,13 @@ describe(`Firebase Utilities`, () => {
     const fbAdmin = getFirebaseAdmin();
     const uid = shortId().new();
     const user = await fbAdmin.auth().createUser({ uid });
-    const { idToken } = await getIdToken(fbAdmin, user.uid);
+    const { idToken } = await getTestIdToken({
+      admin: fbAdmin,
+      uid: user.uid,
+      emulatorOptions: {
+        port: 9100,
+      },
+    });
     // Actual validation
     const decodedUser = await validateToken(idToken, fbAdmin);
     expect(decodedUser.uid).toEqual(uid);

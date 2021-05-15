@@ -9,11 +9,25 @@ interface IdTokenResponse {
   expiresIn: string;
 }
 
-export async function getIdToken(
-  admin: typeof firebase,
-  uid: string,
-  claims?: Record<string, string>
-): Promise<IdTokenResponse> {
+export interface GetTestIdTokenArgs {
+  admin: typeof firebase;
+  uid: string;
+  claims?: Record<string, string>;
+  emulatorOptions?: {
+    port?: number;
+    hostname?: string;
+    firebaseApiKey?: string;
+  };
+}
+
+export async function getTestIdToken({
+  admin,
+  uid,
+  claims,
+  emulatorOptions,
+}: GetTestIdTokenArgs): Promise<IdTokenResponse> {
+  const { port, hostname, firebaseApiKey } = emulatorOptions ?? {};
+
   const customToken = await admin.auth().createCustomToken(uid, claims);
 
   return new Promise((respond, reject) => {
@@ -23,9 +37,11 @@ export async function getIdToken(
     });
 
     const options = {
-      hostname: `localhost`,
-      port: 9100,
-      path: `/www.googleapis.com/identitytoolkit/v3/relyingparty/verifyCustomToken?key=${process.env.FIREBASE_APP_API_KEY}`,
+      hostname: hostname || `localhost`,
+      port: port ?? 9099,
+      path: `/www.googleapis.com/identitytoolkit/v3/relyingparty/verifyCustomToken?key=${
+        firebaseApiKey || process.env.FIREBASE_APP_API_KEY
+      }`,
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

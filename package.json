@@ -25,7 +25,8 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "build:firebase-utils": "nx build utilities-firebase",
-    "publish:firebase-utils": "nx publish utilities-firebase",
+    "prepublish:firebase-utils": "npm run build:firebase-utils",
+    "publish:firebase-utils": "npm publish dist/libs/utilities/firebase",
     "build:gcp-functions": "nx build gcp-functions --generatePackageJson",
     "prestart:firebase-emulators": "npm run build:gcp-functions",
     "start:firebase-emulators": "firebase emulators:start"

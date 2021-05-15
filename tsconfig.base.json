@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@anatine/utilities/firebase": ["libs/utilities/firebase/src/index.ts"],
-      "@anatine/zero-mesh-databases": ["libs/databases/src/index.ts"]
+      "@anatine/zero-mesh-databases": ["libs/databases/src/index.ts"],
+      "@anatine/firebase-utils": ["libs/utilities/firebase/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

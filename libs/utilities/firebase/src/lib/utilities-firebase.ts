@@ -1,12 +1,15 @@
 import * as admin from 'firebase-admin';
 
-export const RTDB_MICROSERVICES = `https://${process.env.PROJECT_ID}.firebaseio.com`;
+export const REALTIME_DB_URL = `https://${process.env.PROJECT_ID}.firebaseio.com`;
 
-export function getFirebaseAdmin(): typeof admin {
+export function getFirebaseAdmin(
+  credential: admin.credential.Credential = admin.credential.applicationDefault(),
+  databaseURL = REALTIME_DB_URL
+): typeof admin {
   if (admin.apps.length === 0) {
     admin.initializeApp({
-      credential: admin.credential.applicationDefault(),
-      databaseURL: RTDB_MICROSERVICES,
+      credential,
+      databaseURL,
     });
     admin.firestore().settings({ ignoreUndefinedProperties: true });
   }
